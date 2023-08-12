@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-test file storage
+test file storage basemodel
 """
 import unittest
 from models.base_model import BaseModel

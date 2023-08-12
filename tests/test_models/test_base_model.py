@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Test for base model
+Test for base model PROJECT AIRBNB
 """
 import unittest
 from models.base_model import BaseModel
@@ -10,11 +10,11 @@ import uuid
 
 class TestBaseModel(unittest.TestCase):
     """
-    Test cases
+    Test cases PROJECT AIRBNB
     """
     def test_string(self):
         """
-        checks the string
+        checks the string PROJECT AIRBNB
         """
         base = BaseModel()
         self.assertEqual(base.__str__(),
@@ -23,7 +23,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_to_diction(self):
         """
-        checks the to_dict()
+        checks the to_dict() PROJECT AIRBNB
         """
         base = BaseModel()
         prvs_time = base.updated_at
@@ -37,7 +37,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_attrb(self):
         """
-        checks if the right classes
+        checks if the right classe PROJECT AIRBNB
         """
         base = BaseModel()
         base2 = BaseModel()
@@ -48,7 +48,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_save(self):
         """
-        tests the save method
+        test the save method project AIRNB
         """
         base = BaseModel()
         prvstime = base.updated_at

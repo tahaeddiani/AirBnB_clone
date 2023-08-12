@@ -15,7 +15,7 @@ from models.state import State
 
 class HBNBCommand(cmd.Cmd):
     """
-    The entry point for the command interpreter
+    The entry point for the cmd interpreter
     """
     prompt = '(hbnb) '
     classes = ['BaseModel', 'User', 'Place', 'State',
@@ -23,11 +23,11 @@ class HBNBCommand(cmd.Cmd):
     dotcmds = ['.all()', '.count()']
 
     def emptyline(self):
-        """Empty line + Enter shouldn't execute anything"""
+        """Empty line + Enter should not execute anything"""
         pass
     
     def do_EOF(self, line):
-        """Ctrl D - to kill the program or exit from cmd"""
+        """Ctrl D - to exit from cmd"""
         print()
         return True
 
@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_create(self, line):
-        """Creates a new instance of a given class"""
+        """Creates a new instance of a class"""
         if line == '':
             print('** class name missing **')
         elif line not in HBNBCommand.classes:
@@ -60,7 +60,7 @@ class HBNBCommand(cmd.Cmd):
             print(obj.id)
 
     def do_show(self, line):
-        """Prints the string"""
+        """Prints string"""
         args = line.split()
         if line == '':
             print('** class name missing **')
@@ -80,7 +80,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, line):
         """
-        Deletes an instance based on the class name
+        Deletes an instance based on the class
         """
         args = line.split()
         if line == '':
@@ -102,7 +102,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """
-        Prints all string representation of all instances
+        Prints all string representation of all instance
         """
         args = line.split()
         result = []
@@ -121,7 +121,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """
-        Updates an instance based on the class name and
+        Updates instance based on the class name and
         id by adding or updating attribute
         (save the change into the JSON file). Ex: $ update
         BaseModel 1234-1234-1234 email "aibnb@mail.com".
@@ -149,7 +149,7 @@ class HBNBCommand(cmd.Cmd):
                 print('** attribute can\'t be updated **')
                 return
             """
-            string validity test begins (incomplete)
+            string validity test begins
             """
             if value[0] == '"' and value[-1] == '"' or value[0] == "'":
                 if value[0] != '"':
@@ -340,7 +340,7 @@ must be between double quotes **")
                             value = int(value)
                     except ValueError:
                         pass
-                """ string validity test ends """
+                """ string validity test end """
 
                 key = 'User.' + model_id
                 try:
@@ -848,7 +848,7 @@ must be between double quotes **")
                             value = int(value)
                     except ValueError:
                         pass
-                """ string validity test ends """
+                """ string validity test end """
 
                 key = 'City.' + model_id
                 try:
