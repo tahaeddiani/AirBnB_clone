@@ -25,7 +25,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """Empty line + Enter should not execute anything"""
         pass
-    
+
     def do_EOF(self, line):
         """Ctrl D - to exit from cmd"""
         print()
@@ -522,7 +522,6 @@ must be between double quotes **")
         else:
             return cmd.Cmd.default(self, line)
 
-
     def do_State(self, line):
         objects = []
         parse_line = cmd.Cmd.parseline(self, line)
@@ -861,7 +860,6 @@ must be between double quotes **")
         else:
             return cmd.Cmd.default(self, line)
 
-
     def do_Amenity(self, line):
         objects = []
         parse_line = cmd.Cmd.parseline(self, line)
@@ -1030,7 +1028,6 @@ must be between double quotes **")
 
         else:
             return cmd.Cmd.default(self, line)
-
 
     def do_Review(self, line):
         objects = []
